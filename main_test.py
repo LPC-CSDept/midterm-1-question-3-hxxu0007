@@ -8,48 +8,43 @@ import math
 def test_main_1():
     captureout = io.StringIO()
     sys.stdout = captureout
-    datastr = 'program\npyton\njava\nc++\nstop'
+    datastr = '15'
     sys.stdin = io.StringIO(datastr)
 
-    longest, shortest = main.main()
+    pnumber = main.main()
     sys.stdout = sys.__stdout__
     print('captured ', captureout.getvalue())
     lines = captureout.getvalue().split('\n')
     print(lines)
 
-    assert longest == 'program'
-    assert shortest == 'c++'
-
-    # regex_string = r'[\w,\w]*1'
-    # regex_string += r'[\w,\w]*3'
-    # regex_string += r'[\w,\w]*5'
-    # regex_string += r'[\w,\w]*'
-    # print(regex_string)
-    # res = re.search(regex_string, main.evenlist)
-    # assert res != none
-    # print(res.group())
+    assert pnumber == 17
 
 
 def test_main_2():
     captureout = io.StringIO()
     sys.stdout = captureout
-    datastr = 'abc\nbbb\nxxx\nzz\nphp\nstop'
+    datastr = '20'
     sys.stdin = io.StringIO(datastr)
 
-    longest, shortest = main.main()
+    pnumber = main.main()
     sys.stdout = sys.__stdout__
     print('captured ', captureout.getvalue())
     lines = captureout.getvalue().split('\n')
     print(lines)
 
-    assert longest == 'abc'
-    assert shortest == 'zz'
+    assert pnumber == 23
 
-    # regex_string = r'[\w,\w]*1'
-    # regex_string += r'[\w,\w]*3'
-    # regex_string += r'[\w,\w]*5'
-    # regex_string += r'[\w,\w]*'
-    # print(regex_string)
-    # res = re.search(regex_string, main.evenlist)
-    # assert res != none
-    # print(res.group())
+
+def test_main_3():
+    captureout = io.StringIO()
+    sys.stdout = captureout
+    datastr = '10010'
+    sys.stdin = io.StringIO(datastr)
+
+    pnumber = main.main()
+    sys.stdout = sys.__stdout__
+    print('captured ', captureout.getvalue())
+    lines = captureout.getvalue().split('\n')
+    print(lines)
+
+    assert pnumber == 10037

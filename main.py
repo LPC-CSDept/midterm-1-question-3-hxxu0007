@@ -1,16 +1,18 @@
 def main():
+
+    number = int(input('Enter your number: '))
     """
     ########################################
     Code Your Program here
     ########################################
     """
-    i = 0
-    longest = shortest = ''
+
+    print(pnumber)
 
     ########################################
     # Do not delete the return statement
     ########################################
-    return longest, shortest
+    return pnumber
 ##
 
 
